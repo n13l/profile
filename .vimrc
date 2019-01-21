@@ -107,7 +107,7 @@ let g:clang_debug=0
 let g:clang_hl_errors=0
 let g:clang_user_options='|| exit 0'
 let g:clang_complete_auto = 0
-let g:clang_complete_copen = 0
+let g:clang_complete_copen = 1
 let g:clang_complete_macros = 1
 set conceallevel=2
 set concealcursor=vin
@@ -149,6 +149,7 @@ nnoremap <F3> :TlistToggle<CR>
 nnoremap <F4> :NERDTreeToggle<CR> 
 nnoremap <F5> :CCTreeLoadDB<CR>
 nnoremap <F6> :call g:ClangUpdateQuickFix()<CR>
+nmap <C-g><C-o> <Plug>window:quickfix:toggle
 "autocmd vimenter * NERDTree
 "autocmd StdinReadPre * let s:std_in=1
 "autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
